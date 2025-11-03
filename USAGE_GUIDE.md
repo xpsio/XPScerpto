@@ -15,7 +15,7 @@ This guide shows how to use **XPScerpto** in real-world applications. It focuses
 - Minimal CMake integration
 
 > **Note**  
-> Module names below reflect the canonical structure used across XPS Crypto. If your local tree exposes a single **facade** (e.g., `import xps.crypto.api;`), you can stick to the facade for most tasks, or import specialized modules when you need lower‑level control.
+> Module names below reflect the canonical structure used across XPScerpto. If your local tree exposes a single **facade** (e.g., `import xps.crypto.api;`), you can stick to the facade for most tasks, or import specialized modules when you need lower‑level control.
 
 ---
 
@@ -29,7 +29,7 @@ This guide shows how to use **XPScerpto** in real-world applications. It focuses
 
 ```cmake
 # Top-level CMakeLists.txt (excerpt)
-add_subdirectory(external/xpsi-crypto)
+add_subdirectory(external/XPScerpto)
 
 # If the project provides an interface target:
 target_link_libraries(my_app PRIVATE xps_crypto)
