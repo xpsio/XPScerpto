@@ -1,0 +1,216 @@
+{
+  "generated": "2025-11-03T19:26:04Z",
+  "mapping": [
+    {
+      "source": "README-LICENSE-SECTION.md",
+      "target": "README.md",
+      "size": 1911,
+      "sha256": "610fa537c28c735e1d2bf268c58611b2369ffb42d8eda5aff6e7eb906a2598b9"
+    },
+    {
+      "source": "README-LEGAL.md",
+      "target": "README.md",
+      "size": 1138,
+      "sha256": "d5619138eec923840e30410918141fb9f20bd7b90c16e4725078275c9949b570"
+    },
+    {
+      "source": "USAGE_GUIDE.md",
+      "target": "USAGE_GUIDE.md",
+      "size": 11326,
+      "sha256": "fee4311539b35cdc6105acf9e5992fe69aa3b434fb8c38d8b55f6582323515cc"
+    },
+    {
+      "source": "simd/USAGE_GUIDE.md",
+      "target": "USAGE_GUIDE.md",
+      "size": 4204,
+      "sha256": "1f215995b93f05621ac91e66d499d1023f66bdac8743e53d4c398bbca612b34d"
+    },
+    {
+      "source": "auto_rotation/USAGE_GUIDE.md",
+      "target": "USAGE_GUIDE.md",
+      "size": 2890,
+      "sha256": "995b802e2461b9230be2ff0ca16b108b6f8eaf73fc5dde625703f4e5f790d81d"
+    },
+    {
+      "source": "super/USAGE_GUIDE.md",
+      "target": "USAGE_GUIDE.md",
+      "size": 1737,
+      "sha256": "434f7aa1a50f0fb6c56f261b5fb28f221ebb3208f6d664713b4326307e1917df"
+    },
+    {
+      "source": "ARCHITECTURE.md",
+      "target": "ARCHITECTURE.md",
+      "size": 11195,
+      "sha256": "b77c2d32ea53006b7760b227620db6d29e304a7dfb91d8d000d96fabafc8fb20"
+    },
+    {
+      "source": "simd/ARCHITECTURE.md",
+      "target": "ARCHITECTURE.md",
+      "size": 5188,
+      "sha256": "66e91933cb017db86fb17cbc97f5a438a991ee8855f02633e0ac8ab95bb9734d"
+    },
+    {
+      "source": "auto_rotation/ARCHITECTURE.md",
+      "target": "ARCHITECTURE.md",
+      "size": 4987,
+      "sha256": "279293375fd5dfa9cf1d60540eea7ea45984b29cdb7017152b52b259fb2871ce"
+    },
+    {
+      "source": "super/ARCHITECTURE.md",
+      "target": "ARCHITECTURE.md",
+      "size": 3431,
+      "sha256": "3e786e362674108c323e54ba70cf8dceedd002af7f49805cd8ad84ab329fb61c"
+    },
+    {
+      "source": "SECURITY_SPEC.md",
+      "target": "SECURITY_SPEC.md",
+      "size": 7371,
+      "sha256": "982e6cbbd05c7583f64be21fae62bda2c275ff898ab2a7819b6bb1f586d07cbd"
+    },
+    {
+      "source": "simd/SECURITY_SPEC.md",
+      "target": "SECURITY_SPEC.md",
+      "size": 3722,
+      "sha256": "e6dc37093d532dca3998d80a068455f0a6f654195bebcc4e4665f74c7a08d1b5"
+    },
+    {
+      "source": "auto_rotation/SECURITY_SPEC.md",
+      "target": "SECURITY_SPEC.md",
+      "size": 1997,
+      "sha256": "72ab9059ea21ca4000ec5ca5f7d35ace0af3f90cbdbd8abe6259ddc4df7ece6c"
+    },
+    {
+      "source": "super/SECURITY_SPEC.md",
+      "target": "SECURITY_SPEC.md",
+      "size": 1287,
+      "sha256": "97d8be9c89e81e436198550e49b6b20ba6e5de79f0320aeb3b3ff744c3f67cb9"
+    },
+    {
+      "source": "PERFORMANCE.md",
+      "target": "PERFORMANCE.md",
+      "size": 10109,
+      "sha256": "5c8995866c7aea99d92d9c47908a2da78f0cc6dac8586a7761496262a395b12e"
+    },
+    {
+      "source": "simd/PERFORMANCE.md",
+      "target": "PERFORMANCE.md",
+      "size": 2293,
+      "sha256": "f1ed14772386d5e9dab6464de1f706e95161d7bddd322688a0accd19af56b34f"
+    },
+    {
+      "source": "auto_rotation/PERFORMANCE.md",
+      "target": "PERFORMANCE.md",
+      "size": 1494,
+      "sha256": "14c974ae95aec6e731eab8927184e107bce180e92d9661ba96eb2a7b817b0383"
+    },
+    {
+      "source": "super/PERFORMANCE.md",
+      "target": "PERFORMANCE.md",
+      "size": 841,
+      "sha256": "7317bdfa6c115ed026cb6d1c65474b2c44189804607d742e2df9235235a5752f"
+    },
+    {
+      "source": "DIAGRAMS .md",
+      "target": "DIAGRAMS.md",
+      "size": 8997,
+      "sha256": "ee39ccea209f38c34da121393bc69ea6b7906c5c38d5aa1a362878d1661de2ea"
+    },
+    {
+      "source": "simd/DIAGRAMS.md",
+      "target": "DIAGRAMS.md",
+      "size": 1958,
+      "sha256": "d1166fd2530a1790b5c3a9814b727cf4700dec437a9f97243347e1021a5d2c2a"
+    },
+    {
+      "source": "auto_rotation/DIAGRAMS.md",
+      "target": "DIAGRAMS.md",
+      "size": 1106,
+      "sha256": "a8eafba1418798de827377c301ccb92b7a9b31e303014e4a1fa00af4639b46f4"
+    },
+    {
+      "source": "super/DIAGRAMS.md",
+      "target": "DIAGRAMS.md",
+      "size": 749,
+      "sha256": "811dc96f297931cc60a1bc4027a6277f44d524c4ece724ba62bf19219d1dc170"
+    },
+    {
+      "source": "WORKFLOWS .md",
+      "target": "WORKFLOWS.md",
+      "size": 13099,
+      "sha256": "b8283b235a35e066a5136ca7670a2a52cfbf9cc44fc4f0fb0092fdf5ce5a27bd"
+    },
+    {
+      "source": "simd/WORKFLOWS.md",
+      "target": "WORKFLOWS.md",
+      "size": 1716,
+      "sha256": "6225459152894414e459a144416026f76f9576723ade052c5e169b0072dd9284"
+    },
+    {
+      "source": "auto_rotation/WORKFLOWS.md",
+      "target": "WORKFLOWS.md",
+      "size": 1562,
+      "sha256": "ad08eaeb3c1bd9144ffac5ec3402e2d73dbbce9805018eca474457dcae9af5a3"
+    },
+    {
+      "source": "super/WORKFLOWS.md",
+      "target": "WORKFLOWS.md",
+      "size": 672,
+      "sha256": "6f47d19fd9cbf5aa21b6f7a2e59c1292ea8c813bc5e26c782cb71c8aa5c70355"
+    },
+    {
+      "source": "COMMERCIAL-LICENSE-AGREEMENT.md",
+      "target": "extra/Commercial_License_Agreement.md",
+      "size": 5149,
+      "sha256": "c54fa278196cc84c316a7f21480388b7705905267b7cc73e2a54b2789b519b64"
+    },
+    {
+      "source": "FIPS1403_Mapping.md",
+      "target": "extra/Fips1403_Mapping.md",
+      "size": 5120,
+      "sha256": "d09bfe4325f9391895071af49613b74fff3fedbf12c373909cd09fa64afcd1af"
+    },
+    {
+      "source": "AEAD/AEAD.md",
+      "target": "extra/Aead.md",
+      "size": 6822,
+      "sha256": "258210351c6b7d78ecf71de5cb9105c69416b32d8e62385abbbd34e4286599a0"
+    },
+    {
+      "source": "hot_patch/hot_patch.md",
+      "target": "extra/Hot_Patch.md",
+      "size": 11473,
+      "sha256": "9f38ad7a234a3f2ca387a107d14986265eef0ef1233e310db4f4aa2b54a22780"
+    },
+    {
+      "source": "Orchestrator/Orchestrator.md",
+      "target": "extra/Orchestrator.md",
+      "size": 9861,
+      "sha256": "3c34234fbbcf4c67793ae8b2ab8122ab3d907f9dc991b04642bd1fca5f41609c"
+    },
+    {
+      "source": "PQC/falcon/docs/xps-falcon1024-native-docs-en.md",
+      "target": "extra/Xps_Falcon1024_Native_Docs_En.md",
+      "size": 12005,
+      "sha256": "8c467900e5db50fa10c272c7ac6a747d1748efd28dd6e83bf5b81c2f907e7b42"
+    },
+    {
+      "source": "PQC/Dilithium5/Dilithium5.md",
+      "target": "extra/Dilithium5.md",
+      "size": 15030,
+      "sha256": "9d444ef791a79c4087c17b3fe2363fc7e2a50f1627bead7ce6eae47a064ad73c"
+    },
+    {
+      "source": "PQC/kyber1024/kyber1024.md",
+      "target": "extra/Kyber1024.md",
+      "size": 11424,
+      "sha256": "b4a4212de7895307016f0ec7055bdbc761cb71e95a918f7d86b3b6762702ea74"
+    },
+    {
+      "source": "x25519/README_x25519.md",
+      "target": "extra/Readme_X25519.md",
+      "size": 9909,
+      "sha256": "791e4e01a020cbc186fb0a3bd3eabe130be03d56e9bfd7657c605a641eaf0189"
+    }
+  ],
+  "todos": []
+}

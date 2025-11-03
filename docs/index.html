@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XPScerpto Docs - Professional Documentation Hub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --secondary: #7c3aed;
+            --dark-bg: #0f172a;
+            --card-bg: #1e293b;
+            --card-border: #334155;
+            --text-primary: #f8fafc;
+            --text-secondary: #cbd5e1;
+            --accent: #06b6d4;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --gradient: linear-gradient(135deg, var(--primary), var(--secondary));
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background: var(--dark-bg);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+            background-image: 
+                radial-gradient(circle at 15% 50%, rgba(37, 99, 235, 0.1) 0%, transparent 20%),
+                radial-gradient(circle at 85% 30%, rgba(124, 58, 237, 0.1) 0%, transparent 20%),
+                radial-gradient(circle at 50% 80%, rgba(6, 182, 212, 0.05) 0%, transparent 20%);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem 0;
+            position: relative;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .logo-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--gradient);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+        }
+
+        .logo-icon i {
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 0.5rem;
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto 1.5rem;
+        }
+
+        .badges {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(30, 41, 59, 0.7);
+            border: 1px solid var(--card-border);
+            border-radius: 50px;
+            padding: 0.5rem 1rem;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            transition: all 0.3s ease;
+        }
+
+        .badge:hover {
+            border-color: var(--primary);
+            color: var(--text-primary);
+            transform: translateY(-2px);
+        }
+
+        .badge i {
+            color: var(--accent);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            border-color: var(--primary);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+        }
+
+        .card-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(37, 99, 235, 0.1);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-size: 1.2rem;
+        }
+
+        .card-badge {
+            background: var(--primary-dark);
+            color: white;
+            font-size: 0.7rem;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .card h2 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .card h2 a {
+            color: var(--text-primary);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .card h2 a:hover {
+            color: var(--primary);
+        }
+
+        .card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            flex-grow: 1;
+        }
+
+        .card-footer {
+            margin-top: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+        }
+
+        .file-info {
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .file-info i {
+            color: var(--accent);
+        }
+
+        .card-link {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+            transition: all 0.2s;
+        }
+
+        .card-link:hover {
+            gap: 0.5rem;
+        }
+
+        .highlight-card {
+            grid-column: 1 / -1;
+            background: var(--gradient);
+            color: white;
+            border: none;
+        }
+
+        .highlight-card h2 a,
+        .highlight-card p {
+            color: white;
+        }
+
+        .highlight-card .card-icon {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+        }
+
+        footer {
+            margin-top: 4rem;
+            text-align: center;
+            padding: 2rem 0;
+            border-top: 1px solid var(--card-border);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .badges {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-code-branch"></i>
+                </div>
+            </div>
+            <h1>XPScerpto Documentation</h1>
+            <p class="tagline">Professional code extraction and documentation library with advanced parsing capabilities</p>
+            
+            <div class="badges">
+                <div class="badge">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Enterprise Ready</span>
+                </div>
+                <div class="badge">
+                    <i class="fas fa-bolt"></i>
+                    <span>High Performance</span>
+                </div>
+                <div class="badge">
+                    <i class="fas fa-expand-arrows-alt"></i>
+                    <span>Extensible Architecture</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="grid">
+            <div class="card highlight-card">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <div class="card-badge">GET STARTED</div>
+                </div>
+                <h2><a href="README.md">Introduction & Overview</a></h2>
+                <p>Comprehensive guide to XPScerpto's capabilities, use cases, and positioning in the developer ecosystem.</p>
+                <div class="card-footer">
+                    <div class="file-info">
+                        <i class="far fa-file-alt"></i>
+                        <span>README.md</span>
+                    </div>
+                    <a href="README.md" class="card-link">
+                        Explore <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                </div>
+                <h2><a href="USAGE_GUIDE.md">Usage Guide</a></h2>
+                <p>Detailed instructions for installation, configuration, and practical examples for common use cases.</p>
+                <div class="card-footer">
+                    <div class="file-info">
+                        <i class="far fa-file-alt"></i>
+                        <span>USAGE_GUIDE.md</span>
+                    </div>
+                    <a href="USAGE_GUIDE.md" class="card-link">
+                        Read <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i class="fas fa-sitemap"></i>
+                    </div>
+                </div>
+                <h2><a href="ARCHITECTURE.md">System Architecture</a></h2>
+                <p>Deep dive into the modular design, components, and data flow of the XPScerpto library.</p>
+                <div class="card-footer">
+                    <div class="file-info">
+                        <i class="far fa-file-alt"></i>
+                        <span>ARCHITECTURE.md</span>
+                    </div>
+                    <a href="ARCHITECTURE.md" class="card-link">
+                        Explore <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                </div>
+                <h2><a href="SECURITY_SPEC.md">Security Specification</a></h2>
+                <p>Comprehensive threat modeling, security considerations, and hardening guidelines.</p>
+                <div class="card-footer">
+                    <div class="file-info">
+                        <i class="far fa-file-alt"></i>
+                        <span>SECURITY_SPEC.md</span>
+                    </div>
+                    <a href="SECURITY_SPEC.md" class="card-link">
+                        Secure <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                </div>
+                <h2><a href="PERFORMANCE.md">Performance Guide</a></h2>
+                <p>Optimization strategies, benchmarking methodology, and performance tuning tips.</p>
+                <div class="card-footer">
+                    <div class="file-info">
+                        <i class="far fa-file-alt"></i>
+                        <span>PERFORMANCE.md</span>
+                    </div>
+                    <a href="PERFORMANCE.md" class="card-link">
+                        Optimize <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                </div>
+                <h2><a href="DIAGRAMS.md">Technical Diagrams</a></h2>
+                <p>Visual representations of system architecture, data flows, and component relationships.</p>
+                <div class="card-footer">
+                    <div class="file-info">
+                        <i class="far fa-file-alt"></i>
+                        <span>DIAGRAMS.md</span>
+                    </div>
+                    <a href="DIAGRAMS.md" class="card-link">
+                        View <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                </div>
+                <h2><a href="WORKFLOWS.md">Development Workflows</a></h2>
+                <p>Standardized processes for development, testing, and release management.</p>
+                <div class="card-footer">
+                    <div class="file-info">
+                        <i class="far fa-file-alt"></i>
+                        <span>WORKFLOWS.md</span>
+                    </div>
+                    <a href="WORKFLOWS.md" class="card-link">
+                        Implement <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i class="fas fa-archive"></i>
+                    </div>
+                </div>
+                <h2><a href="extra/">Additional Resources</a></h2>
+                <p>Supplementary documentation, migration guides, and legacy content archive.</p>
+                <div class="card-footer">
+                    <div class="file-info">
+                        <i class="far fa-folder-open"></i>
+                        <span>Extra/</span>
+                    </div>
+                    <a href="extra/" class="card-link">
+                        Browse <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>XPScerpto &copy; 2023 | Professional Documentation Hub | Preserved & refined from original sources</p>
+        </footer>
+    </div>
+</body>
+</html>
