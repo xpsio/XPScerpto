@@ -4,7 +4,6 @@ XPScerpto is a high‑performance, production‑minded cryptography library buil
 It focuses on **speed**, **safety**, and **crypto‑agility**, with **runtime ISA dispatch** (AVX2, AVX‑512, NEON, RVV), 
 **secure memory primitives**, and a clear separation of **portable** versus **accelerated** kernels.
 
-> **Note**: Examples below use namespaces like `xps.crypto.*`. Adjust to your actual module paths if different.
 
 ---
 
