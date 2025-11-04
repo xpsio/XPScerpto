@@ -3,132 +3,6 @@
 <!-- TOC-BEGIN -->
 ## Table of Contents
 
-- [Table of Contents](#table-of-contents)
-- [Table of Contents](#table-of-contents)
-- [Table of Contents](#table-of-contents)
-- [Executive Summary](#executive-summary)
-  - [Key Features](#key-features)
-- [Table of Contents](#table-of-contents)
-- [Quick Start Guide](#quick-start-guide)
-  - [Minimal Working Example](#minimal-working-example)
-  - [Build Configuration (Standalone)](#build-configuration-standalone)
-- [Architecture Overview](#architecture-overview)
-  - [Module Dependencies](#module-dependencies)
-  - [Core Components](#core-components)
-- [Integration Guide](#integration-guide)
-  - [Prerequisites](#prerequisites)
-  - [CMake Integration](#cmake-integration)
-  - [Recommended Build Order](#recommended-build-order)
-- [API Reference](#api-reference)
-  - [Core Types](#core-types)
-  - [Primary Interface](#primary-interface)
-- [Security Implementation](#security-implementation)
-  - [Cryptographic Parameters](#cryptographic-parameters)
-  - [Memory Footprint (Indicative)](#memory-footprint-indicative)
-  - [Security Considerations](#security-considerations)
-- [Performance Characteristics](#performance-characteristics)
-  - [Benchmark Results (Illustrative)](#benchmark-results-illustrative)
-- [Operational Guidelines](#operational-guidelines)
-  - [Key Management (Sketch)](#key-management-sketch)
-  - [Error Handling (Safe Wrappers)](#error-handling-safe-wrappers)
-- [Troubleshooting & Support](#troubleshooting--support)
-  - [Common Issues](#common-issues)
-  - [Performance Tuning](#performance-tuning)
-- [Compliance Notes](#compliance-notes)
-- [Appendix](#appendix)
-  - [Parameter Specifications](#parameter-specifications)
-  - [References](#references)
-- [Change Log](#change-log)
-- [Document Classification](#document-classification)
-<!-- TOC-END -->
-
-
-<!-- TOC-BEGIN -->
-## Table of Contents
-
-- [Table of Contents](#table-of-contents)
-- [Table of Contents](#table-of-contents)
-- [Executive Summary](#executive-summary)
-  - [Key Features](#key-features)
-- [Table of Contents](#table-of-contents)
-- [Quick Start Guide](#quick-start-guide)
-  - [Minimal Working Example](#minimal-working-example)
-  - [Build Configuration (Standalone)](#build-configuration-standalone)
-- [Architecture Overview](#architecture-overview)
-  - [Module Dependencies](#module-dependencies)
-  - [Core Components](#core-components)
-- [Integration Guide](#integration-guide)
-  - [Prerequisites](#prerequisites)
-  - [CMake Integration](#cmake-integration)
-  - [Recommended Build Order](#recommended-build-order)
-- [API Reference](#api-reference)
-  - [Core Types](#core-types)
-  - [Primary Interface](#primary-interface)
-- [Security Implementation](#security-implementation)
-  - [Cryptographic Parameters](#cryptographic-parameters)
-  - [Memory Footprint (Indicative)](#memory-footprint-indicative)
-  - [Security Considerations](#security-considerations)
-- [Performance Characteristics](#performance-characteristics)
-  - [Benchmark Results (Illustrative)](#benchmark-results-illustrative)
-- [Operational Guidelines](#operational-guidelines)
-  - [Key Management (Sketch)](#key-management-sketch)
-  - [Error Handling (Safe Wrappers)](#error-handling-safe-wrappers)
-- [Troubleshooting & Support](#troubleshooting--support)
-  - [Common Issues](#common-issues)
-  - [Performance Tuning](#performance-tuning)
-- [Compliance Notes](#compliance-notes)
-- [Appendix](#appendix)
-  - [Parameter Specifications](#parameter-specifications)
-  - [References](#references)
-- [Change Log](#change-log)
-- [Document Classification](#document-classification)
-<!-- TOC-END -->
-
-
-<!-- TOC-BEGIN -->
-## Table of Contents
-
-- [Table of Contents](#table-of-contents)
-- [Executive Summary](#executive-summary)
-  - [Key Features](#key-features)
-- [Table of Contents](#table-of-contents)
-- [Quick Start Guide](#quick-start-guide)
-  - [Minimal Working Example](#minimal-working-example)
-  - [Build Configuration (Standalone)](#build-configuration-standalone)
-- [Architecture Overview](#architecture-overview)
-  - [Module Dependencies](#module-dependencies)
-  - [Core Components](#core-components)
-- [Integration Guide](#integration-guide)
-  - [Prerequisites](#prerequisites)
-  - [CMake Integration](#cmake-integration)
-  - [Recommended Build Order](#recommended-build-order)
-- [API Reference](#api-reference)
-  - [Core Types](#core-types)
-  - [Primary Interface](#primary-interface)
-- [Security Implementation](#security-implementation)
-  - [Cryptographic Parameters](#cryptographic-parameters)
-  - [Memory Footprint (Indicative)](#memory-footprint-indicative)
-  - [Security Considerations](#security-considerations)
-- [Performance Characteristics](#performance-characteristics)
-  - [Benchmark Results (Illustrative)](#benchmark-results-illustrative)
-- [Operational Guidelines](#operational-guidelines)
-  - [Key Management (Sketch)](#key-management-sketch)
-  - [Error Handling (Safe Wrappers)](#error-handling-safe-wrappers)
-- [Troubleshooting & Support](#troubleshooting--support)
-  - [Common Issues](#common-issues)
-  - [Performance Tuning](#performance-tuning)
-- [Compliance Notes](#compliance-notes)
-- [Appendix](#appendix)
-  - [Parameter Specifications](#parameter-specifications)
-  - [References](#references)
-- [Change Log](#change-log)
-- [Document Classification](#document-classification)
-<!-- TOC-END -->
-
-
-<!-- TOC-BEGIN -->
-## Table of Contents
-
 - [Executive Summary](#executive-summary)
   - [Key Features](#key-features)
 - [Table of Contents](#table-of-contents)
@@ -270,7 +144,7 @@ graph TD
 
 | Component       | Purpose                       | Implementation                      |
 |----------------|-------------------------------|-------------------------------------|
-| NTT Engine     | Polynomial multiplication     | `xps.crypto.pqc.dilithium`          |
+| Number Theoretic Transform (NTT) Engine     | Polynomial multiplication     | `xps.crypto.pqc.dilithium`          |
 | Hash Functions | SHAKE128/256 for XOF          | `xps.crypto.hash.shake*`            |
 | Sampling       | CBD for secret generation     | `xps.crypto.pqc.dilithium.support`  |
 | Arithmetic     | Modular polynomial operations | Optimized C++ with `constexpr`      |
@@ -420,7 +294,7 @@ public:
 **Implementation notes**
 - Not NIST-certified; intended for evaluation and development.  
 - Side-channel analysis is not yet complete.  
-- Secret-key serialization and storage are **out of scope** (use AEAD).  
+- Secret-key serialization and storage are **out of scope** (use Authenticated Encryption with Associated Data (AEAD)).  
 - Entropy quality depends on the platform RNG.
 
 **Best-practice wrapper (sketch)**
