@@ -17,7 +17,7 @@ jobs:
         build_type: [Release]
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Install Ninja
         shell: bash
@@ -47,7 +47,7 @@ jobs:
     runs-on: ubuntu-latest
     if: hashFiles('CMakeLists.txt') != ''
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Install Ninja & Clang
         run: |
           sudo apt-get update
@@ -68,6 +68,6 @@ jobs:
     name: Mermaid Lint
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - name: Run Mermaid linter
         run: python3 .github/scripts/check_mermaid.py

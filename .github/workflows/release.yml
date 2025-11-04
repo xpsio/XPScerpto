@@ -7,7 +7,7 @@ jobs:
   build-and-release:
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - run: cmake -S . -B build -G Ninja -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=OFF -DXPS_MEM_ENABLE_RUNTIME_SIMD=ON
       - run: cmake --build build -j
       - run: cmake --install build --prefix "$PWD/pkgroot"
