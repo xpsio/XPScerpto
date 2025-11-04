@@ -4,6 +4,18 @@
 ## Table of Contents
 
 - [Table of Contents](#table-of-contents)
+- [Table of Contents](#table-of-contents)
+- [1. Secure Buffers](#1-secure-buffers)
+- [2. Locking Semantics (per OS)](#2-locking-semantics-per-os)
+- [3. Wipe & Reuse](#3-wipe--reuse)
+- [4. Pitfalls](#4-pitfalls)
+<!-- TOC-END -->
+
+
+<!-- TOC-BEGIN -->
+## Table of Contents
+
+- [Table of Contents](#table-of-contents)
 - [1. Secure Buffers](#1-secure-buffers)
 - [2. Locking Semantics (per OS)](#2-locking-semantics-per-os)
 - [3. Wipe & Reuse](#3-wipe--reuse)

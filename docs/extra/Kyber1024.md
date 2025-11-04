@@ -5,6 +5,42 @@
 
 - [Table of Contents](#table-of-contents)
 - [Table of Contents](#table-of-contents)
+- [Table of Contents](#table-of-contents)
+- [Executive Summary](#executive-summary)
+  - [Key Features](#key-features)
+- [Table of Contents](#table-of-contents)
+- [Quick Start Guide](#quick-start-guide)
+  - [Minimal Working Example](#minimal-working-example)
+  - [Standalone Build Configuration](#standalone-build-configuration)
+- [Architecture Overview](#architecture-overview)
+  - [Module Dependencies](#module-dependencies)
+  - [Core Components](#core-components)
+- [Integration Guide](#integration-guide)
+  - [Requirements](#requirements)
+  - [Typical CMake Setup](#typical-cmake-setup)
+  - [Recommended Build Order](#recommended-build-order)
+- [API Reference](#api-reference)
+- [Security Implementation](#security-implementation)
+  - [Kyber1024 Parameters (Aligned)](#kyber1024-parameters-aligned)
+  - [Implemented Protections](#implemented-protections)
+  - [Notes](#notes)
+- [Performance & Benchmarks *(Indicative)*](#performance--benchmarks-indicative)
+- [Operational Guidelines](#operational-guidelines)
+- [Troubleshooting](#troubleshooting)
+- [Compliance Notes](#compliance-notes)
+- [Appendix](#appendix)
+  - [Standard Sizes (ML‑KEM‑1024)](#standard-sizes-mlkem1024)
+  - [General Parameters](#general-parameters)
+- [Change Log](#change-log)
+- [Document Classification](#document-classification)
+<!-- TOC-END -->
+
+
+<!-- TOC-BEGIN -->
+## Table of Contents
+
+- [Table of Contents](#table-of-contents)
+- [Table of Contents](#table-of-contents)
 - [Executive Summary](#executive-summary)
   - [Key Features](#key-features)
 - [Table of Contents](#table-of-contents)

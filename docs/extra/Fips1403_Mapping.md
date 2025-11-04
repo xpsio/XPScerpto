@@ -5,6 +5,22 @@
 
 - [Table of Contents](#table-of-contents)
 - [Table of Contents](#table-of-contents)
+- [Table of Contents](#table-of-contents)
+- [Algorithm Tables (Illustrative)](#algorithm-tables-illustrative)
+  - [Approved / Allowed (Default)](#approved--allowed-default)
+  - [Allowed but Non‑Approved (Use‑case Dependent)](#allowed-but-nonapproved-usecase-dependent)
+- [Self‑Test Inventory (Examples)](#selftest-inventory-examples)
+- [Finite State Model (High‑level)](#finite-state-model-highlevel)
+- [Documentation & Artifacts (Pointers)](#documentation--artifacts-pointers)
+- [Gaps & Actions (If pursuing formal validation)](#gaps--actions-if-pursuing-formal-validation)
+<!-- TOC-END -->
+
+
+<!-- TOC-BEGIN -->
+## Table of Contents
+
+- [Table of Contents](#table-of-contents)
+- [Table of Contents](#table-of-contents)
 - [Algorithm Tables (Illustrative)](#algorithm-tables-illustrative)
   - [Approved / Allowed (Default)](#approved--allowed-default)
   - [Allowed but Non‑Approved (Use‑case Dependent)](#allowed-but-nonapproved-usecase-dependent)

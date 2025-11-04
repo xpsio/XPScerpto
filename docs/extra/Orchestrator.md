@@ -5,6 +5,36 @@
 
 - [Table of Contents](#table-of-contents)
 - [Table of Contents](#table-of-contents)
+- [Table of Contents](#table-of-contents)
+- [Executive Summary](#executive-summary)
+- [Table of Contents](#table-of-contents)
+- [Quick Start](#quick-start)
+  - [Minimal Orchestration (Conceptual)](#minimal-orchestration-conceptual)
+- [Architecture](#architecture)
+  - [Modules & Responsibilities](#modules--responsibilities)
+- [Configuration](#configuration)
+  - [1) Patch Manifest (`patch_manifest.json`)](#1-patch-manifest-patchmanifestjson)
+  - [2) Trust Store (`trust_store.json`)](#2-trust-store-truststorejson)
+  - [3) Policy (`orchestrator.policy.yaml`)](#3-policy-orchestratorpolicyyaml)
+  - [4) Rollout Plan (`rollout_plan.yaml`)](#4-rollout-plan-rolloutplanyaml)
+- [Rollout Workflows](#rollout-workflows)
+  - [A. Hot‑Patch (Zero‑Downtime)](#a-hotpatch-zerodowntime)
+  - [B. Key Rotation](#b-key-rotation)
+- [Integration (CMake/Modules)](#integration-cmakemodules)
+- [Operational Practices](#operational-practices)
+- [Troubleshooting](#troubleshooting)
+- [Compliance & Audit](#compliance--audit)
+- [Appendix](#appendix)
+  - [Module Names Detected](#module-names-detected)
+  - [Glossary](#glossary)
+<!-- TOC-END -->
+
+
+<!-- TOC-BEGIN -->
+## Table of Contents
+
+- [Table of Contents](#table-of-contents)
+- [Table of Contents](#table-of-contents)
 - [Executive Summary](#executive-summary)
 - [Table of Contents](#table-of-contents)
 - [Quick Start](#quick-start)

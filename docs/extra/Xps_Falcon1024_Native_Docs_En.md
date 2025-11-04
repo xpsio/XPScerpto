@@ -5,6 +5,42 @@
 
 - [Table of Contents](#table-of-contents)
 - [Table of Contents](#table-of-contents)
+- [Table of Contents](#table-of-contents)
+- [1) Parameters](#1-parameters)
+- [2) Architecture](#2-architecture)
+- [3) Public API](#3-public-api)
+  - [`KeyPair keygen()`](#keypair-keygen)
+  - [`Result<Signature> sign(const SecretKey&, bytes message)`](#resultsignature-signconst-secretkey-bytes-message)
+  - [`bool verify(const PublicKey&, bytes message, const Signature&)`](#bool-verifyconst-publickey-bytes-message-const-signature)
+- [4) Key & Signature Formats](#4-key--signature-formats)
+  - [4.1 Public/Secret Keys](#41-publicsecret-keys)
+  - [4.2 Signature — **Fixed‑size compressed container** (preferred)](#42-signature--fixedsize-compressed-container-preferred)
+  - [4.3 Internal coding](#43-internal-coding)
+- [5) Build](#5-build)
+- [6) Security Notes](#6-security-notes)
+- [7) Tests](#7-tests)
+  - [Single file runner](#single-file-runner)
+  - [In‑file Self‑test](#infile-selftest)
+- [8) Invariants](#8-invariants)
+- [9) Performance](#9-performance)
+- [10) Troubleshooting](#10-troubleshooting)
+- [11) Compatibility & Risk](#11-compatibility--risk)
+- [12) Quickstart](#12-quickstart)
+- [13) Optional TODOs](#13-optional-todos)
+- [14) Quick Architecture Diagrams (ASCII + Mermaid)](#14-quick-architecture-diagrams-ascii--mermaid)
+  - [14.1 Processing Lines (ASCII)](#141-processing-lines-ascii)
+  - [14.2 Data Flow (Mermaid)](#142-data-flow-mermaid)
+  - [14.3 Sequence (Mermaid)](#143-sequence-mermaid)
+  - [14.4 Components (Mermaid)](#144-components-mermaid)
+  - [14.5 Signature Container Layout (Mermaid + ASCII)](#145-signature-container-layout-mermaid--ascii)
+<!-- TOC-END -->
+
+
+<!-- TOC-BEGIN -->
+## Table of Contents
+
+- [Table of Contents](#table-of-contents)
+- [Table of Contents](#table-of-contents)
 - [1) Parameters](#1-parameters)
 - [2) Architecture](#2-architecture)
 - [3) Public API](#3-public-api)

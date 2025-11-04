@@ -5,6 +5,32 @@
 
 - [Table of Contents](#table-of-contents)
 - [Table of Contents](#table-of-contents)
+- [Table of Contents](#table-of-contents)
+- [Executive Summary](#executive-summary)
+- [Architecture](#architecture)
+- [Audience & Use‑Cases](#audience--usecases)
+- [Public API](#public-api)
+- [Quick Start](#quick-start)
+  - [1) Generate a keypair & derive public](#1-generate-a-keypair--derive-public)
+  - [2) ECDH + HKDF to AEAD key](#2-ecdh--hkdf-to-aead-key)
+  - [3) Batch ECDH](#3-batch-ecdh)
+- [Build & CMake](#build--cmake)
+- [Runtime Dispatch & SIMD](#runtime-dispatch--simd)
+- [Batch ECDH](#batch-ecdh)
+- [Security & Compliance](#security--compliance)
+- [Platform Support](#platform-support)
+- [Testing & Validation](#testing--validation)
+- [Benchmark Methodology](#benchmark-methodology)
+- [Performance Guidance](#performance-guidance)
+- [Versioning & Deprecation](#versioning--deprecation)
+<!-- TOC-END -->
+
+
+<!-- TOC-BEGIN -->
+## Table of Contents
+
+- [Table of Contents](#table-of-contents)
+- [Table of Contents](#table-of-contents)
 - [Executive Summary](#executive-summary)
 - [Architecture](#architecture)
 - [Audience & Use‑Cases](#audience--usecases)

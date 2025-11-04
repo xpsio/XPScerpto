@@ -4,6 +4,18 @@
 ## Table of Contents
 
 - [Table of Contents](#table-of-contents)
+- [Table of Contents](#table-of-contents)
+- [1. APIs](#1-apis)
+- [2. Keys & Sizes](#2-keys--sizes)
+- [3. Side‑Channels](#3-sidechannels)
+- [4. Migration Strategy](#4-migration-strategy)
+<!-- TOC-END -->
+
+
+<!-- TOC-BEGIN -->
+## Table of Contents
+
+- [Table of Contents](#table-of-contents)
 - [1. APIs](#1-apis)
 - [2. Keys & Sizes](#2-keys--sizes)
 - [3. Side‑Channels](#3-sidechannels)

@@ -5,6 +5,31 @@
 
 - [Table of Contents](#table-of-contents)
 - [Table of Contents](#table-of-contents)
+- [Table of Contents](#table-of-contents)
+- [Executive Summary](#executive-summary)
+  - [Key Features](#key-features)
+- [Table of Contents](#table-of-contents)
+- [Quick Start](#quick-start)
+  - [Encrypt / Decrypt (Unified Pattern)](#encrypt--decrypt-unified-pattern)
+- [API Overview](#api-overview)
+- [Algorithm Profiles](#algorithm-profiles)
+  - [AES‑GCM (if present)](#aesgcm-if-present)
+  - [ChaCha20‑Poly1305 (if present)](#chacha20poly1305-if-present)
+  - [AES‑GCM‑SIV (if present)](#aesgcmsiv-if-present)
+  - [OCB3 (if present)](#ocb3-if-present)
+- [Integration (CMake/Modules)](#integration-cmakemodules)
+- [Security Notes](#security-notes)
+- [Performance Notes](#performance-notes)
+- [Troubleshooting](#troubleshooting)
+- [Detected Modules](#detected-modules)
+<!-- TOC-END -->
+
+
+<!-- TOC-BEGIN -->
+## Table of Contents
+
+- [Table of Contents](#table-of-contents)
+- [Table of Contents](#table-of-contents)
 - [Executive Summary](#executive-summary)
   - [Key Features](#key-features)
 - [Table of Contents](#table-of-contents)

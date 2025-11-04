@@ -1,6 +1,36 @@
 
 # XPScerpto — Diagrams 
 
+<!-- TOC-BEGIN -->
+## Table of Contents
+
+- [Table of Contents](#table-of-contents)
+- [Legend & Conventions](#legend--conventions)
+- [1) Layered Architecture Overview](#1-layered-architecture-overview)
+- [2) “Harvest-Now, Decrypt-Later” (HNDL) Threat Model](#2-harvest-now-decrypt-later-hndl-threat-model)
+- [3) Zero-Downtime Hot Patch (Live Update) Flow](#3-zero-downtime-hot-patch-live-update-flow)
+- [4) Runtime Dispatch Decision Tree (ISA/Feature Probing)](#4-runtime-dispatch-decision-tree-isafeature-probing)
+- [5) Key Lifecycle & Rotation](#5-key-lifecycle--rotation)
+- [6) AEAD (e.g., AES-GCM/ChaCha20-Poly1305) Data Flow](#6-aead-eg-aes-gcmchacha20-poly1305-data-flow)
+- [7) PQC Hybrid HPKE Envelope](#7-pqc-hybrid-hpke-envelope)
+- [8) CSRNG CTR‑DRBG Reseed](#8-csrng-ctrdrbg-reseed)
+- [9) C++ Modules Build & Packaging Pipeline](#9-c-modules-build--packaging-pipeline)
+- [10) Telemetry, Logging, and Audit](#10-telemetry-logging-and-audit)
+- [11) Side-Channel & Constant-Time Boundaries](#11-side-channel--constant-time-boundaries)
+- [12) Failure Modes & Safe Defaults](#12-failure-modes--safe-defaults)
+- [Merged from `simd/DIAGRAMS.md`](#merged-from-simddiagramsmd)
+  - [1. SIMD Component Architecture](#1-simd-component-architecture)
+  - [2. SIMD Selection Sequence (First Call)](#2-simd-selection-sequence-first-call)
+  - [3. SIMD Policy State](#3-simd-policy-state)
+  - [4. SIMD CI/CD Flow](#4-simd-cicd-flow)
+- [Merged from `auto_rotation/DIAGRAMS.md`](#merged-from-autorotationdiagramsmd)
+  - [A) Auto‑Rotation Component Diagram](#a-autorotation-component-diagram)
+  - [B) Rotation Sequence (ZDT)](#b-rotation-sequence-zdt)
+  - [C) Rollback & Guardrails](#c-rollback--guardrails)
+- [Super/Hybrid Overview](#superhybrid-overview)
+<!-- TOC-END -->
+
+
 > **Single-file, production-grade diagrams bundle for GitHub.**
 > Covers layered architecture, HNDL threat model, zero-downtime hot patch, runtime dispatch,
 > key lifecycle, AEAD flow, PQC-hybrid HPKE, CSRNG/DRBG, build & packaging, telemetry/audit,

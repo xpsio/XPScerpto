@@ -5,6 +5,28 @@
 
 - [Table of Contents](#table-of-contents)
 - [Table of Contents](#table-of-contents)
+- [Table of Contents](#table-of-contents)
+- [1. Definitions](#1-definitions)
+- [2. Grant of License](#2-grant-of-license)
+- [3. Ownership](#3-ownership)
+- [4. Fees and Payment](#4-fees-and-payment)
+- [5. Confidentiality](#5-confidentiality)
+- [6. Support and Updates](#6-support-and-updates)
+- [7. Warranty and Disclaimer](#7-warranty-and-disclaimer)
+- [8. Limitation of Liability](#8-limitation-of-liability)
+- [9. Term and Termination](#9-term-and-termination)
+- [10. Export and Compliance](#10-export-and-compliance)
+- [11. Governing Law and Jurisdiction](#11-governing-law-and-jurisdiction)
+- [12. Entire Agreement](#12-entire-agreement)
+- [13. Signatures](#13-signatures)
+<!-- TOC-END -->
+
+
+<!-- TOC-BEGIN -->
+## Table of Contents
+
+- [Table of Contents](#table-of-contents)
+- [Table of Contents](#table-of-contents)
 - [1. Definitions](#1-definitions)
 - [2. Grant of License](#2-grant-of-license)
 - [3. Ownership](#3-ownership)

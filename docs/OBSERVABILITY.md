@@ -4,6 +4,17 @@
 ## Table of Contents
 
 - [Table of Contents](#table-of-contents)
+- [Table of Contents](#table-of-contents)
+- [1. Metrics](#1-metrics)
+- [2. Logging](#2-logging)
+- [3. Export](#3-export)
+<!-- TOC-END -->
+
+
+<!-- TOC-BEGIN -->
+## Table of Contents
+
+- [Table of Contents](#table-of-contents)
 - [1. Metrics](#1-metrics)
 - [2. Logging](#2-logging)
 - [3. Export](#3-export)

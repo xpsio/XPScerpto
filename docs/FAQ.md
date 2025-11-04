@@ -4,6 +4,19 @@
 ## Table of Contents
 
 - [Table of Contents](#table-of-contents)
+- [Table of Contents](#table-of-contents)
+- [1) Mermaid diagrams لا تظهر على GitHub](#1-mermaid-diagrams----github)
+- [2) SIGILL عند التشغيل](#2-sigill--)
+- [3) PCM mismatch في وحدات C++](#3-pcm-mismatch---c)
+- [4) استخدام `xps::expected` مقابل الاستثناءات](#4--xpsexpected--)
+- [5) GCM nonce reuse](#5-gcm-nonce-reuse)
+<!-- TOC-END -->
+
+
+<!-- TOC-BEGIN -->
+## Table of Contents
+
+- [Table of Contents](#table-of-contents)
 - [1) Mermaid diagrams لا تظهر على GitHub](#1-mermaid-diagrams----github)
 - [2) SIGILL عند التشغيل](#2-sigill--)
 - [3) PCM mismatch في وحدات C++](#3-pcm-mismatch---c)

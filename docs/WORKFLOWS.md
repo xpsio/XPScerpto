@@ -16,6 +16,39 @@
 ## Table of Contents
 
 - [Table of Contents](#table-of-contents)
+- [Table of Contents](#table-of-contents)
+- [🔗 Quick Navigation](#-quick-navigation)
+- [Conventions](#conventions)
+- [Workflow 1 — Data Encryption & Decryption (AEAD/AES-GCM exemplar)](#workflow-1--data-encryption--decryption-aeadaes-gcm-exemplar)
+  - [Goal](#goal)
+  - [Illustrative C++ (pseudo-API)](#illustrative-c-pseudo-api)
+  - [Error/Resiliency Notes](#errorresiliency-notes)
+- [Workflow 2 — Digital Signature & Verification (Ed25519 exemplar)](#workflow-2--digital-signature--verification-ed25519-exemplar)
+  - [Goal](#goal)
+  - [Illustrative C++](#illustrative-c)
+  - [Error/Resiliency Notes](#errorresiliency-notes)
+- [Workflow 3 — Key Lifecycle Management (Create → Use → Rotate → Revoke/Destroy)](#workflow-3--key-lifecycle-management-create--use--rotate--revokedestroy)
+  - [Goal](#goal)
+  - [Sequence (high level)](#sequence-high-level)
+  - [Illustrative C++](#illustrative-c)
+- [Workflow 4 — Crypto-Agility Hot-Patch (Zero-Downtime Swap)](#workflow-4--crypto-agility-hot-patch-zero-downtime-swap)
+  - [Goal](#goal)
+- [Workflow 5 — Mutual Authentication (mTLS-like, X25519 + HKDF + AEAD)](#workflow-5--mutual-authentication-mtls-like-x25519--hkdf--aead)
+  - [Goal](#goal)
+  - [Illustrative C++](#illustrative-c)
+- [Appendices](#appendices)
+  - [Appendix A — Key State Rules](#appendix-a--key-state-rules)
+  - [Appendix B — Error & Audit Taxonomy](#appendix-b--error--audit-taxonomy)
+  - [Appendix C — Configuration Hooks](#appendix-c--configuration-hooks)
+- [Advanced Playbooks](#advanced-playbooks)
+- [Contributing & Security](#contributing--security)
+<!-- TOC-END -->
+
+
+<!-- TOC-BEGIN -->
+## Table of Contents
+
+- [Table of Contents](#table-of-contents)
 - [🔗 Quick Navigation](#-quick-navigation)
 - [Conventions](#conventions)
 - [Workflow 1 — Data Encryption & Decryption (AEAD/AES-GCM exemplar)](#workflow-1--data-encryption--decryption-aeadaes-gcm-exemplar)
