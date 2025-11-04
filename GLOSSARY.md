@@ -1,0 +1,28 @@
+# XPScerpto Glossary (Acronyms & Terms)
+
+- **AAD** — Additional Authenticated Data.
+- **ABI** — Application Binary Interface.
+- **AEAD** — Authenticated Encryption with Associated Data.
+- **API** — Application Programming Interface.
+- **CSRNG** — Cryptographically Secure Random Number Generator.
+- **DAG** — Directed Acyclic Graph.
+- **DHT** — Distributed Hash Table.
+- **DRBG** — Deterministic Random Bit Generator.
+- **FFT** — Fast Fourier Transform.
+- **HKDF** — HMAC‑based Key Derivation Function.
+- **HMAC** — Hash‑based Message Authentication Code.
+- **HNDL** — Harvest‑Now, Decrypt‑Later.
+- **HPKE** — Hybrid Public Key Encryption.
+- **HSM** — Hardware Security Module.
+- **ISA** — Instruction Set Architecture.
+- **KDF** — Key Derivation Function.
+- **KEM** — Key Encapsulation Mechanism.
+- **KMS** — Key Management Service.
+- **NTT** — Number Theoretic Transform.
+- **PBFT** — Practical Byzantine Fault Tolerance.
+- **PQC** — Post‑Quantum Cryptography.
+- **PoH** — Proof‑of‑History.
+- **PoS** — Proof‑of‑Stake.
+- **RBAC** — Role‑Based Access Control.
+- **SIMD** — Single Instruction, Multiple Data.
+- **TLS** — Transport Layer Security.
