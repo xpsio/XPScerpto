@@ -1,0 +1,48 @@
+
+name: docs-ci
+on:
+  pull_request:
+    paths: ['docs/**','README.md','.github/workflows/docs-ci.yml','.markdownlint.json','lychee.toml','tools/ci/**']
+  push:
+    branches: [ main ]
+    paths: ['docs/**']
+jobs:
+  markdownlint:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: DavidAnson/markdownlint-cli2-action@v16
+        with:
+          globs: |
+            docs/**/*.md
+            README.md
+  linkcheck:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: lycheeverse/lychee-action@v2
+        with:
+          args: --accept 200,206,429 --no-progress --max-concurrency 8 --base . --config lychee.toml docs/**/*.md README.md
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  forbid-todos:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - run: bash tools/ci/check_todos.sh docs README.md
+  toc:
+    if: github.event_name == 'push'
+    runs-on: ubuntu-24.04
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+      - run: |
+          python3 tools/ci/gen_toc.py docs
+          if [ -n "$(git status --porcelain)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git commit -am "docs: auto-TOC update"
+            git push
+          fi

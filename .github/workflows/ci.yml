@@ -1,1 +1,73 @@
+name: CI
 
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+    branches: ["**"]
+
+jobs:
+  build:
+    name: Build (${{ matrix.os }} • ${{ matrix.build_type }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+        build_type: [Release]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Ninja
+        shell: bash
+        run: |
+          if [[ "$RUNNER_OS" == "Linux" ]]; then
+            sudo apt-get update && sudo apt-get install -y ninja-build
+          elif [[ "$RUNNER_OS" == "macOS" ]]; then
+            brew install ninja || true
+          else
+            choco install ninja --no-progress -y || true
+          fi
+
+      - name: Configure (CMake)
+        if: hashFiles('CMakeLists.txt') != ''
+        run: cmake -S . -B build -G Ninja -DCMAKE_BUILD_TYPE=${{ matrix.build_type }}
+
+      - name: Build
+        if: hashFiles('CMakeLists.txt') != ''
+        run: cmake --build build -j
+
+      - name: Test
+        if: hashFiles('CMakeLists.txt') != ''
+        run: ctest --test-dir build --output-on-failure
+
+  sanitizers:
+    name: Sanitizers (ASan/UBSan)
+    runs-on: ubuntu-latest
+    if: hashFiles('CMakeLists.txt') != ''
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Ninja & Clang
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ninja-build clang
+      - name: Configure (ASan/UBSan)
+        run: |
+          cmake -S . -B build-asan -G Ninja \
+            -DCMAKE_BUILD_TYPE=RelWithDebInfo \
+            -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++ \
+            -DCMAKE_C_FLAGS="-fsanitize=address,undefined -fno-omit-frame-pointer" \
+            -DCMAKE_CXX_FLAGS="-fsanitize=address,undefined -fno-omit-frame-pointer"
+      - name: Build
+        run: cmake --build build-asan -j
+      - name: Test (non-blocking)
+        run: ctest --test-dir build-asan --output-on-failure || true
+
+  docs-mermaid-lint:
+    name: Mermaid Lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run Mermaid linter
+        run: python3 .github/scripts/check_mermaid.py

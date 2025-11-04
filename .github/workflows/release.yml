@@ -1,0 +1,16 @@
+
+name: release
+on:
+  push:
+    tags: ['v*']
+jobs:
+  build-and-release:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - run: cmake -S . -B build -G Ninja -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTING=OFF -DXPS_MEM_ENABLE_RUNTIME_SIMD=ON
+      - run: cmake --build build -j
+      - run: cmake --install build --prefix "$PWD/pkgroot"
+      - run: cmake -E tar "cfv" "xpscerpto-${{ github.ref_name }}-linux.tar.gz" --format=gnutar pkgroot
+      - uses: softprops/action-gh-release@v2
+        with: { files: 'xpscerpto-*.tar.gz' }
