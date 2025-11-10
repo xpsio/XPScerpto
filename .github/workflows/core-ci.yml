@@ -5,7 +5,7 @@ jobs:
   build:
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: ashutoshvarma/setup-ninja@v1.1
       - run: cmake -S . -B build -G Ninja -DBUILD_TESTING=ON -DCMAKE_BUILD_TYPE=Release -DXPS_MEM_ENABLE_RUNTIME_SIMD=ON
       - run: cmake --build build -j

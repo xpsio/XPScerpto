@@ -10,7 +10,7 @@ jobs:
   markdownlint:
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: DavidAnson/markdownlint-cli2-action@v16
         with:
           globs: |
@@ -19,7 +19,7 @@ jobs:
   linkcheck:
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - uses: lycheeverse/lychee-action@v2
         with:
           args: --accept 200,206,429 --no-progress --max-concurrency 8 --base . --config lychee.toml docs/**/*.md README.md
@@ -28,7 +28,7 @@ jobs:
   forbid-todos:
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - run: bash tools/ci/check_todos.sh docs README.md
   toc:
     if: github.event_name == 'push'
@@ -37,7 +37,7 @@ jobs:
       contents: write
       pull-requests: write
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       - run: |
           python3 tools/ci/gen_toc.py docs
           if [ -n "$(git status --porcelain)" ]; then
